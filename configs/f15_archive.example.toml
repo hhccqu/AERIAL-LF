@@ -1,0 +1,24 @@
+[paths]
+features = "../data/private/canonical_training_features_f15.npz"
+split = "../data/private/split.json"
+semantic_registry = "../data/private/dense_semantic_registry.json"
+semantic_search_roots = ["../data/private/semantics"]
+baseline_checkpoint = "../data/private/baselines/fold{fold}_seed{seed}/M0.pth"
+output_dir = "../outputs/f15_oof"
+
+[training]
+seeds = [20260827, 20260828, 20260829]
+epochs = 50
+batch_size = 16
+fusion_lr = 0.001
+head_lr = 0.0002
+weight_decay = 0.0001
+num_threads = 1
+device = "auto"
+
+[baseline]
+epochs = 50
+batch_size = 32
+learning_rate = 0.001
+weight_decay = 0.01
+

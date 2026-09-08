@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aerial-lf"
+version = "0.1.0"
+description = "Aerial latent fusion for command-conditioned waypoint prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.0",
+  "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+aerial-lf-train = "aerial_lf.train:main"
+aerial-lf-baseline = "aerial_lf.baseline:main"
+aerial-lf-audit = "aerial_lf.audit:main"
+aerial-lf-assemble = "aerial_lf.feature_assembly:main"
+aerial-lf-dino-lift = "aerial_lf.dino_lift:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

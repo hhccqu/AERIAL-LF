@@ -1,0 +1,10 @@
+{
+  "schema": "AERIAL_LF_SEMANTIC_REGISTRY_V01",
+  "records": [
+    {
+      "scene_id": "scene_0001",
+      "semantic_npz": {"path": "semantics/scene_0001.npz"}
+    }
+  ]
+}
+

@@ -1,0 +1,13 @@
+{
+  "schema": "AERIAL_LF_DINO_LIFT_REGISTRY_V01",
+  "records": [
+    {
+      "scene_id": "scene_0001",
+      "patch_npz": "dino_patch/scene_0001.npz",
+      "patch_manifest": "dino_patch/scene_0001.json",
+      "geometry": "geometry/scene_0001.json",
+      "grid_npz": "geometry/scene_0001_grid.npz"
+    }
+  ]
+}
+
